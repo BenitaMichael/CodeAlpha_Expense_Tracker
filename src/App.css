@@ -1,0 +1,144 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: #F0ECE5;
+}
+
+/*-----HEADER COMPONENT-----*/
+.header{
+  text-align: center;
+}
+
+.header hr{
+  width: 150px;
+  height: 4px;
+  background-color: #31304D;
+  border: none;
+  margin: 0 auto;
+}
+
+.header p{
+  font-weight: 600;
+}
+
+
+/*-----BALANCE COMPONENT-----*/
+.balance{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+#credit{
+  color: #08f26e;
+}
+
+#debit{
+  color: #FF0000;
+}
+
+
+/*-----TRANSACTION HISTORY-----*/
+.transactions{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.transactions .history, .transactions .form{
+  width: 40%;
+  margin-top: 3rem;
+}
+
+.form h3, .history h3{
+  font-size: 2rem;
+}
+
+input[type='text'],
+input[type='number'] {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin: 12px 0;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #31304D;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 20px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #c0392b;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+@media (max-width: 768px){
+  .transactions{
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 2rem;
+  }
+  
+  .transactions .history, .transactions .form{
+    width: 100%;
+  }
+}
