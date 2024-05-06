@@ -1,8 +1,9 @@
-import React from 'react'
-import { useState } from 'react'
-
+import { useState, useContext } from 'react';
+import { GlobalContext } from '../context/GlobalState';
 
 const Transactions = () => {
+
+  const context = useContext(GlobalContext)
 
   const [text, setText] = useState('');
   const [amount, setAmount] = useState('')

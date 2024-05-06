@@ -11,6 +11,7 @@ body{
 /*-----HEADER COMPONENT-----*/
 .header{
   text-align: center;
+  margin-top: 24px;
 }
 
 .header hr{
@@ -18,7 +19,7 @@ body{
   height: 4px;
   background-color: #31304D;
   border: none;
-  margin: 0 auto;
+  margin: 8px auto;
 }
 
 .header p{
