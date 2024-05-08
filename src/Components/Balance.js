@@ -29,12 +29,12 @@ const Balance = () => {
 
       <div>
         <h4>Total credit</h4>
-        <h1 id="credit">₦{income}</h1> {/* Corrected */}
+        <h1 id="credit">₦{income}</h1>
       </div>
 
       <div>
         <h4>Total Debit</h4>
-        <h1 id="debit">₦{expense}</h1> {/* Corrected */}
+        <h1 id="debit">₦{expense}</h1>
       </div>
     </div>
   );
