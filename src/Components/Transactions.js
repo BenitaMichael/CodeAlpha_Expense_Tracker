@@ -11,6 +11,20 @@ const Transactions = () => {
   const [text, setText] = useState('');
   const [amount, setAmount] = useState('')
 
+  const { addTransaction } = useContext(GlobalContext);
+
+  const onSubmit = e => {
+    e.preventDefault();
+
+    const newTransaction = {
+      id: Math.floor(Math.random() * 100000000),
+      text,
+      amount: +amount
+    }
+
+    addTransaction(newTransaction);
+  }
+
 
 
 
@@ -18,7 +32,7 @@ const Transactions = () => {
     <div className='transactions'>
         <div className='form'>
         <h3>Add new transaction</h3>
-            <form id="form">
+            <form onSubmit={onSubmit} id="form">
                 <div className="form-control">
                 <label htmlFor="text">Transaction</label>
                 <input type="text"
