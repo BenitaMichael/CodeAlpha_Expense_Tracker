@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 
 
@@ -6,7 +6,12 @@ import Transaction from './Transaction';
 
 const Transactions = () => {
 
-  const { transactions } = useContext(GlobalContext)
+  const { transactions, getTransactions } = useContext(GlobalContext)
+
+  //History
+  useEffect(() =>{
+    getTransactions();
+  }, []);
 
   const [text, setText] = useState('');
   const [amount, setAmount] = useState('')
