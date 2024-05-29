@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getTransactions, addTransaction, delTransaction } = require('../controllers/Transactions')
+const { getTransactions, addTransaction, delTransaction } = require('../controllers/transactions')
 
 router
 .route('/')
